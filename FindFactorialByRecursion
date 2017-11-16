@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int FindFacotial(int nbr);
+int main()
+{
+	int number;
+	cout << "Enter number:";
+	cin >> number;
+	if (number <= 0)
+		cout << "This number doesn't have factorial\n";
+	else if (number == 1)
+		cout << "The factorial = 1\n";
+	else
+		cout << "The factorial = " << FindFacotial(number) << "\n";
+	system("pause");
+
+}
+int FindFacotial(int nbr) {
+	int tmp;
+
+	if (nbr <= 1) return 1;
+		tmp = nbr * FindFacotial(nbr - 1);
+	return tmp;
+}
